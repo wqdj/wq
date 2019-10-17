@@ -1,3 +1,4 @@
+这个已经修改了
 ls -l
 
 l：软连接   rwx rwx rwx r：read w:write x：execute 执行
