@@ -9,4 +9,8 @@ import org.springframework.stereotype.Component;
 public interface EmpMapper {
     //新增员工
     public int EmpAdd(Emp emp);
+
+    //根据手机号查询员工信息
+    public Emp selectByPhone(String phone);
+
 }

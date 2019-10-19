@@ -7,4 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("emp")
 public class EmpController {
 
+
+    @RequestMapping("phoneLogin")
+    public void phoneLogin(){
+
+    }
+
+
 }

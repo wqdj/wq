@@ -14,4 +14,9 @@ public class EmpMapperServiceImpl implements EmpMapperService {
     public int EmpAdd(Emp emp) {
         return empMapper.EmpAdd(emp);
     }
+
+    @Override
+    public Emp selectByPhone(String phone) {
+        return empMapper.selectByPhone(phone);
+    }
 }
