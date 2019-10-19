@@ -10,8 +10,8 @@ import com.aliyuncs.profile.DefaultProfile;
 
 public class SendSms {
 
-    public static void SendCode(String phone,int code) {
-        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "LTAI4Fk45jqKZxRsbpx5XeSx", "<imlfzueuwEA7coLNc6mNIVX6SehwFQ>");
+    public static void SendCode(String phone,String code) {
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "LTAI4Fk45jqKZxRsbpx5XeSx", "imlfzueuwEA7coLNc6mNIVX6SehwFQ");
         IAcsClient client = new DefaultAcsClient(profile);
         CommonRequest request = new CommonRequest();
         request.setMethod(MethodType.POST);
@@ -19,7 +19,7 @@ public class SendSms {
         request.setVersion("2017-05-25");
         request.setAction("SendSms");
         request.putQueryParameter("RegionId", "cn-hangzhou");
-        request.putQueryParameter("PhoneNumbers", phone);
+        request.putQueryParameter("PhoneNumbers", ""+phone+"");
         request.putQueryParameter("SignName", "窝窝头");
         request.putQueryParameter("TemplateCode", "SMS_175572079");
         request.putQueryParameter("TemplateParam", "{'code':'"+code+"'}");

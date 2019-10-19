@@ -19,4 +19,9 @@ public class EmpMapperServiceImpl implements EmpMapperService {
     public Emp selectByPhone(String phone) {
         return empMapper.selectByPhone(phone);
     }
+
+    @Override
+    public Emp selectByPwd(String phone, String password) {
+        return empMapper.selectByPwd(phone,password);
+    }
 }

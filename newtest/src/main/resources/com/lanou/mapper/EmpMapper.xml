@@ -9,4 +9,8 @@
     <select id="selectByPhone" resultType="com.lanou.newtest.bean.Emp">
         select * from TESTEMP where ACCOUNT=#{phone}
     </select>
+
+    <select id="selectByPwd" resultType="com.lanou.newtest.bean.Emp">
+        select * from TESTEMP where ACCOUNT=#{phone} and PASSWORD=#{password}
+    </select>
 </mapper>
