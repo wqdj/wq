@@ -14,4 +14,5 @@ private int empid;
 private String account;
 private String password;
 private int departmentid;
+private Object param;
 }
