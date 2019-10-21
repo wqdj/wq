@@ -7,6 +7,11 @@ import java.util.List;
 public interface EmpMapperService {
     //新增员工
     public int EmpAdd(Emp emp);
-    //查询所有员工
-    public List<Emp> empAll();
+
+    //验证码登录判断
+    public Emp selectByPhone(String phone);
+
+    //账号登录判断
+    public Emp selectByPwd(String phone,String password);
+
 }

@@ -6,8 +6,6 @@ import com.lanou.newtest.service.EmpMapperService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class EmpMapperServiceImpl implements EmpMapperService {
     @Autowired
@@ -18,8 +16,12 @@ public class EmpMapperServiceImpl implements EmpMapperService {
     }
 
     @Override
-    public List<Emp> empAll() {
-        return empMapper.empAll();
+    public Emp selectByPhone(String phone) {
+        return empMapper.selectByPhone(phone);
     }
 
+    @Override
+    public Emp selectByPwd(String phone, String password) {
+        return empMapper.selectByPwd(phone,password);
+    }
 }
